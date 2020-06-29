@@ -1,0 +1,46 @@
+{
+  "name": "deexdex",
+  "version": "0.7.3",
+  "description": "Package for work with Deex DEX",
+  "main": "lib",
+  "bin": {
+    "deexdex": "./cli.js"
+  },
+  "scripts": {
+    "dev": "nodemon --exec yarn build --watch src",
+    "build": "babel src -d lib",
+    "postbuild": "yarn browserify",
+    "browserify": "browserify lib/index.js --standalone Deex -o build/deexdex.js -d",
+    "postbrowserify": "minify build/deexdex.js -o build/deexdex.min.js",
+    "test": "mocha --timeout 10000"
+  },
+  "keywords": [
+    "deex"
+  ],
+  "author": "scientistnik",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.7.4",
+    "assert": "^1.5.0",
+    "bigi": "^1.4.2",
+    "bignumber.js": "^7.2.1",
+    "deexdex-api": "git+http://gitlab.deex.local/dev.null/deexdex-api.git",
+    "deexdex-ecc": "git+http://gitlab.deex.local/dev.null/deexdex-ecc.git",
+    "deexdex-serializer": "git+http://gitlab.deex.local/dev.null/deexdex-serializer.git",
+    "bytebuffer": "^5.0.1",
+    "lzma": "^2.3.2",
+    "safe-buffer": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-minify": "^0.5.1",
+    "browserify": "^16.5.0",
+    "dotenv": "^6.0.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.19.4"
+  }
+}
