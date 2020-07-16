@@ -24,9 +24,9 @@
     "assert": "^1.5.0",
     "bigi": "^1.4.2",
     "bignumber.js": "^7.2.1",
-    "deexdex-api": "git+http://gitlab.deex.local/dev.null/deexdex-api.git",
-    "deexdex-ecc": "git+http://gitlab.deex.local/dev.null/deexdex-ecc.git",
-    "deexdex-serializer": "git+http://gitlab.deex.local/dev.null/deexdex-serializer.git",
+    "deexdex-api": "git+https://github.com/thedeex/deexdex-api.git",
+    "deexdex-ecc": "git+https://github.com/thedeex/deexdex-ecc.git",
+    "deexdex-serializer": "git+https://github.com/thedeex/deexdex-serializer.git",
     "bytebuffer": "^5.0.1",
     "lzma": "^2.3.2",
     "safe-buffer": "^5.2.0"
